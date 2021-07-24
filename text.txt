@@ -1,0 +1,7 @@
+python3.8 -m venv virtual
+pip install django==3.2.4
+django-admin startproject neigbourhood .
+django-admin startapp neighbor
+python manage.py makemigrations flash
+python3.8 manage.py sqlmigrate news 0001
+python3.8 manage.py migrate
