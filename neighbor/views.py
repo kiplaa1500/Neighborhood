@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .forms import *
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
+from django.http import HttpResponse,Http404,HttpResponseRedirect
 
 # Create your views here.
 def index(request):
