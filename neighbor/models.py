@@ -3,7 +3,10 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 
 # Create your models here.
-
+Priority=(
+    ('Low Priority','Low Priority'),
+    ('High Priority','High Priority'),
+)
 class neighbourhood(models.Model):
     neighbourhood= models.CharField(max_length=100)
 
@@ -88,3 +91,27 @@ class Health(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Authorities(models.Model):
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    name =models.CharField(max_length=100)
+    email = models.EmailField()
+    contact = models.IntegerField()
+    address =models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
+
+class notifications(models.Model):
+    title = models.CharField(max_length=100)
+    notification = HTMLField()
+    priority = models.CharField(max_length=15,choices=Priority,default="Informational")
+    author = models.ForeignKey(User,on_delete=models.CASCADE)
+    neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
+    post_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
