@@ -58,3 +58,5 @@ def update_profile(request):
         form = ProfileForm()
 
     return render(request,'profile/update_profile.html',{"form":form})
+
+
