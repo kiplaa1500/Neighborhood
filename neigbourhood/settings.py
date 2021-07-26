@@ -26,9 +26,9 @@ cloudinary.config(
   api_secret = "YE5NEj5BxfH8Uezhhx1MgbYSoqU",
   secure = True
 )
-MODE = config("MODE", default="dev")
-SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+MODE=config("MODE", default="dev")
+SECRET_KEY=config('SECRET_KEY')
+DEBUG=config('DEBUG', default=False, cast=bool)
 
 
 # development
