@@ -7,7 +7,7 @@ Neighbourhood is an application where users are able to see services of differen
 ## project Set up Instructions
 * Ctrl + alt + t to open the terminal
 * now git clone https://github.com/kiplaa1500/Neighborhood
-* cd neigbourhood
+* cd neigborhood
 * you can use code . or atom . to open it.
 
 
